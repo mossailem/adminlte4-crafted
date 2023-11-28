@@ -325,7 +325,7 @@
                     orderable: false,
                     render: function (data, type, row, meta) {
                         return `
-                            <img src="${row.picture}" class="w-100 m-1 rounded" />
+                            <img src="${row.picture}" style="width:100px;height:100px;object-fit:cover;object-position:100% 0" class="m-1 rounded" />
                         `;
                     }
                 },
