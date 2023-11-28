@@ -1,204 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!--begin::Head-->
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard - SB Admin</title>
-    <link href="../../css/datatables/dataTables.bootstrap5.css" rel="stylesheet" />
-    <!-- <link href="../../css/datatables/select.dataTables.min.css" rel="stylesheet" /> -->
-    <!-- <link href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css" rel="stylesheet" /> -->
-    <link href="../../css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>AdminLTE v4 | Dashboard</title><!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--end::Primary Meta Tags--><!--begin::Fonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous">
+    <!--end::Fonts--><!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/styles/overlayscrollbars.min.css"
+        integrity="sha256-dSokZseQNT08wYEWiz5iLI8QPlKxG+TswNRD8k35cpg=" crossorigin="anonymous">
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css"
+        integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous">
+    <!--end::Third Party Plugin(Bootstrap Icons)--><!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="../../assets/css/adminlte.css"><!--end::Required Plugin(AdminLTE)--><!-- apexcharts -->
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+</head><!--end::Head--><!--begin::Body-->
 
-<body class="sb-nav-fixed sb-sidenav-toggled">
-    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="../../index.html">Start Bootstrap</a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+<body class="layout-fixed sidebar-expand-lg sidebar-collapse bg-body-tertiary"><!--begin::App Wrapper-->
+    <div class="app-wrapper">
+        <!--begin::Header-->
+        <nav class="app-header navbar navbar-expand bg-body"><!--begin::Container-->
+            <div class="container-fluid"><!--begin::Start Navbar Links-->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"><i
+                                class="bi bi-list"></i></a></li>
+                    <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Application Name</a></li>
+                </ul><!--end::Start Navbar Links--><!--begin::End Navbar Links-->
+                <ul class="navbar-nav ms-auto"><!--begin::Navbar Search-->
+                    <li class="nav-item dropdown user-menu"><a href="#" class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"><img src="../../assets/assets/img/user2-160x160.jpg"
+                                class="user-image rounded-circle shadow" alt="User Image"><span
+                                class="d-none d-md-inline">Alexander Pierce</span></a>
+                        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"><!--begin::User Image-->
+                            <li class="user-header text-bg-primary"><img src="../../assets/assets/img/user2-160x160.jpg"
+                                    class="rounded-circle shadow" alt="User Image">
+                                <p>
+                                    Alexander Pierce
+                                    <small>Position</small>
+                                </p>
+                            </li><!--end::User Image--><!--begin::Menu Body-->
+                            <li class="user-footer">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                            </li><!--end::Menu Footer-->
+                        </ul>
+                    </li><!--end::User Menu Dropdown-->
+                </ul><!--end::End Navbar Links-->
+            </div><!--end::Container-->
+        </nav><!--end::Header-->
 
-        <ul class="navbar-nav ms-auto me-0 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="me-1 fw-bold d-none d-sm-inline">Name Here</span>
-                    <span class="d-inline d-sm-none"><i class="fas fa-user"></i></span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li>
-                        <div class="m-3">
-                            <span class="fw-bold">Name</span><br>
-                            <small>Role</small>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <a class="nav-link" href="../../index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-gauge-high"></i></div>
-                            Dashboard
-                        </a>
-                        <a class="nav-link" href="../../index-empty.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-gauge-simple-high"></i></div>
-                            Empty Dashboard
-                        </a>
+        <!--begin::Sidebar-->
+        <aside class="app-sidebar bg-light shadow" data-bs-theme="light"><!--begin::Sidebar Brand-->
+            <div class="sidebar-brand"><!--begin::Brand Link-->
+                <a href="../../index.html" class="brand-link"><!--begin::Brand Image-->
+                    <img src="../../assets/assets/img/AdminLTELogo.png" alt="AdminLTE Logo"
+                        class="brand-image opacity-75"><!--end::Brand Image-->
+                    <!--begin::Brand Text-->
+                    <span class="brand-text fw-light">AdminLTE 4</span>
+                    <!--end::Brand Text--></a>
+                <!--end::Brand Link-->
+            </div><!--end::Sidebar Brand--><!--begin::Sidebar Wrapper-->
+            <div class="sidebar-wrapper">
+                <nav class="mt-2"><!--begin::Sidebar Menu-->
+                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link">
+                                <i class="nav-icon bi bi-speedometer"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
 
-                        <div class="sb-sidenav-menu-heading">Data</div>
-                        <a class="nav-link active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
-                            aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
-                            List
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapsed" id="collapseLayouts" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="default.html">Default</a>
-                                <a class="nav-link" href="with-image.html">With Image</a>
-                                <a class="nav-link active" href="with-selectible-row.html">With Selectible Row</a>
-                                <a class="nav-link" href="with-previous-info.html">With Previous Info</a>
-                                <a class="nav-link" href="with-state-info.html">With State Info</a>
-                                <a class="nav-link" href="with-filter.html">With Filter</a>
-                                <a class="nav-link" href="with-many-filter.html">With Many Filter</a>
-                                <a class="nav-link" href="with-inline-edit.html">With Inline Edit</a>
-                                <a class="nav-link" href="with-iline-select2-edit.html">With Inline Select2
-                                    Edit</a>
-                            </nav>
-                        </div>
+                        <li class="nav-item">
+                            <a href="../../index-empty.html" class="nav-link">
+                                <i class="nav-icon bi bi-speedometer2"></i>
+                                <p>Empty Dashboard</p>
+                            </a>
+                        </li>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-                            aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table-list"></i></div>
-                            Form
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../form/default.html">Default</a>
-                                <a class="nav-link" href="../form/in-list.html">In-List</a>
-                                <a class="nav-link" href="../form/in-modal.html">In-Modal</a>
-                            </nav>
-                        </div>
+                        <li class="nav-header text-uppercase">Data</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-list-ul"></i>
+                                <p>List <i class="nav-arrow bi bi-chevron-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../../data/list/default.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Default</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-image.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Image</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-selectible-row.html" class="nav-link active">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Selectible Row</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-previous-info.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Previous Info</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-state-info.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With State Info</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-filter.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Filter</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-many-filter.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Many Filter</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-inline-edit.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Inline Edit</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../../data/list/with-inline-select2-edit.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>With Inline Select2 Edit</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#threeSection"
-                            aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
-                            Information
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="threeSection" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../information/default.html">Default</a>
-                                <a class="nav-link" href="../information/in-modal.html">In-Modal</a>
-                            </nav>
-                        </div>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-input-cursor-text"></i>
+                                <p>Form <i class="nav-arrow bi bi-chevron-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="data/form/default.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Default</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data/form/in-list.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>In-List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data/form/in-modal.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>In-Modal</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
-                        <div class="sb-sidenav-menu-heading">Auth</div>
-                        <a class="nav-link" href="../../login.html">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-right-to-bracket"></i></div>
-                            Login
-                        </a>
-                    </div>
-                </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Good morning,</div>
-                    Name Here
-                </div>
-            </nav>
-        </div>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-12 col-md-8">
-                                    <h3>
-                                        <button class="btn" onclick="history.back()">
-                                            <i class="fas fa-arrow-left"></i>
-                                        </button> Selectable List
-                                    </h3>
-                                </div>
-                                <div class="col-12 d-md-none"></div>
-                                <div class="col-12 col-md-4">
-                                    <button class="btn btn-primary text-uppercase fw-bold float-end">
-                                        <i class="fas fa-plus me-1"></i> Tambah
-                                    </button>
-                                </div>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-info-circle"></i>
+                                <p>Information <i class="nav-arrow bi bi-chevron-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="data/information/default.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>Default</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="data/information/in-modal.html" class="nav-link">
+                                        <i class="nav-icon bi bi-circle"></i>
+                                        <p>In-Modal</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-header text-uppercase">Auth</li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <p>Login</p>
+                            </a>
+                        </li>
+
+                    </ul><!--end::Sidebar Menu-->
+                </nav>
+            </div><!--end::Sidebar Wrapper-->
+        </aside><!--end::Sidebar-->
+
+        <!--begin::App Main-->
+        <main class="app-main">
+            <!--begin::App Content Header-->
+            <div class="container-fluid px-4">
+                <div class="app-content-header"><!--begin::Container-->
+                    <div class="container-fluid"><!--begin::Row-->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="mb-0"><button class="btn" onclick="history.back()">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button> General UI Elements</h3>
                             </div>
-
-                            <div class="row mt-3 mb-4">
-                                <div class="col-12 pt-2 table-responsive">
-                                    <table id="main-datatable" class="table table-borderless table-striped mb-4 w-100">
-                                        <thead>
-                                            <tr>
-                                                <th>Identity</th>
-                                                <th style="width: 100px;">Status</th>
-                                                <th class="text-center" style="width: 100px;">Options</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-
-                                    <style>
-                                        table.dataTable.table-striped>tbody>tr:nth-of-type(2n + 1).selected>* {
-                                            box-shadow: inset 0 0 0 9999px rgba(var(--bs-primary-rgb), 0.2);
-                                        }
-
-
-                                        table.dataTable>tbody>tr.selected>* {
-                                            box-shadow: inset 0 0 0 9999px rgba(var(--bs-primary-rgb), 0.1);
-                                            color: var(--bs-dark)
-                                        }
-                                    </style>
-                                </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary text-uppercase fw-bold float-end">
+                                    <i class="bi bi-plus me-1"></i> Tambah
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+                        </div><!--end::Row-->
+                    </div><!--end::Container-->
+                </div><!--end::App Content Header--><!--begin::App Content-->
+                <div class="app-content"><!--begin::Container-->
+                    <div class="container-fluid"><!--begin::Row-->
+                        <div class="row g-4"><!--begin::Col-->
+                            <div class="col-12 pt-2 table-responsive">
+                                <table id="main-datatable" class="table table-borderless table-striped mb-4 w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>Identity</th>
+                                            <th style="width: 100px;">Status</th>
+                                            <th class="text-center" style="width: 100px;">Options</th>
+                                        </tr>
+                                    </thead>
+                                </table>
 
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="../../js/scripts.js"></script>
+                                <style>
+                                    table.dataTable.table-striped>tbody>tr:nth-of-type(2n + 1).selected>* {
+                                        box-shadow: inset 0 0 0 9999px rgba(var(--bs-primary-rgb), 0.2);
+                                    }
+
+
+                                    table.dataTable>tbody>tr.selected>* {
+                                        box-shadow: inset 0 0 0 9999px rgba(var(--bs-primary-rgb), 0.1);
+                                        color: var(--bs-dark)
+                                    }
+                                </style>
+                            </div>
+                        </div><!--end::Row-->
+                    </div><!--end::Container-->
+                </div><!--end::App Content-->
+            </div>
+        </main><!--end::App Main-->
+
+        <!--begin::Footer-->
+        <footer class="app-footer"><!--begin::To the end-->
+            <div class="float-end d-none d-sm-inline"><small>v</small>1.0.0</div>
+            <!--end::To the end--><!--begin::Copyright--><strong>
+                2023 &copy; <a href="#" class="text-decoration-none">Muslim Aswaja</a>.
+            </strong>
+            Hak cipta dilindungi undang-undang.
+            <!--end::Copyright-->
+        </footer><!--end::Footer-->
+    </div><!--end::App Wrapper--><!--begin::Script--><!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js"
+        integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script>
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
+    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
+    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <script src="../../assets/js/adminlte.js"></script>
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script src="https://code.jquery.com/jquery-3.7.0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"
         crossorigin="anonymous"></script>
-
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+    <script>
+        const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+        const Default = {
+            scrollbarTheme: "os-theme-light",
+            scrollbarAutoHide: "leave",
+            scrollbarClickScroll: true,
+        };
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+            if (
+                sidebarWrapper &&
+                typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+            ) {
+                OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                    scrollbars: {
+                        theme: Default.scrollbarTheme,
+                        autoHide: Default.scrollbarAutoHide,
+                        clickScroll: Default.scrollbarClickScroll,
+                    },
+                });
+            }
+        });
+    </script><!--end::OverlayScrollbars Configure-->
     <script>
         let data = [];
         let mainDatatable;
@@ -285,7 +395,7 @@
                 {
                     targets: [2],
                     render: function (data, type, row, meta) {
-                        return `<button class="btn btn-outline-danger btn-sm"><i class="fas fa-trash fa-fw"></i></button>`;
+                        return `<button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash fa-fw"></i></button>`;
                     },
                     createdCell: function (td, cellData, rowData, row, col) {
                         $(td).css('text-align', 'center')
@@ -340,6 +450,7 @@
         const show = id => document.getElementById(id).style.display = null;
         const hide = id => document.getElementById(id).style.display = "none";
     </script>
-</body>
+
+</body><!--end::Body-->
 
 </html>

@@ -207,12 +207,12 @@
             //     this.collapse();
             // }
             // else {
-            // if (!document.body.classList.contains(CLASS_NAME_SIDEBAR_MINI)) {
-            //     this.expand();
-            // }
-            // if (document.body.classList.contains(CLASS_NAME_SIDEBAR_MINI) && document.body.classList.contains(CLASS_NAME_SIDEBAR_COLLAPSE)) {
-            //     this.collapse();
-            // }
+            //     if (!document.body.classList.contains(CLASS_NAME_SIDEBAR_MINI)) {
+            //         this.expand();
+            //     }
+            //     if (document.body.classList.contains(CLASS_NAME_SIDEBAR_MINI) && document.body.classList.contains(CLASS_NAME_SIDEBAR_COLLAPSE)) {
+            //         this.collapse();
+            //     }
             // }
         }
         toggle() {
